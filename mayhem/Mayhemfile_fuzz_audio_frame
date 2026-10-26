@@ -1,0 +1,9 @@
+project: savantenvs/client-sdk-cpp
+target: fuzz_audio_frame
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_audio_frame/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_audio_frame
+    libfuzzer: true
+    timeout: 5

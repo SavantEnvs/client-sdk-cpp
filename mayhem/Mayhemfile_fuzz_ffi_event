@@ -1,0 +1,9 @@
+project: savantenvs/client-sdk-cpp
+target: fuzz_ffi_event
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ffi_event/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ffi_event
+    libfuzzer: true
+    timeout: 5
